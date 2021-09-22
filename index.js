@@ -12,15 +12,20 @@ cloudinary.config({
 // Settings for path, filename and cloudinary folder name. Read from the .env-file
 const fileSettings = {
   pathname: process.env.PATHNAME,
-  filename: process.env.FILENAME,
+  filename: (process.argv[2] && process.argv[2] + ".jpg") || process.env.FILENAME,
   foldername: process.env.FOLDERNAME,
 };
 
 // Upload file to Cloudinary. Get back https image link, copy to the clipboard
+let options = { folder: `${fileSettings.foldername}` };
+if (fileSettings.filename !== process.env.FILENAME) {
+   options.public_id = fileSettings.filename.replace(/\.[^/.]+$/, "");
+}
 cloudinary.v2.uploader.upload(
   `${fileSettings.pathname}${fileSettings.filename}`,
-  { folder: `${fileSettings.foldername}` },
-  function(error, result) {
-    console.log(result.secure_url);
+  options,
+  function (error, result) {
+    process.stdout.write(result.secure_url);
   }
 );
+

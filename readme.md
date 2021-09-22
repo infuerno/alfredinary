@@ -2,6 +2,8 @@
 
 Alfred 👉 Take Screenshot 👉 Cloudinary 👉 Clipboard
 
+Forked from https://github.com/urre/alfredinary.
+
 ## Features
 
 This workflow provides this in a single command:
@@ -33,14 +35,14 @@ npm install -g alfredinary
 CLOUDNAME="XXXXX"
 APIKEY="XXXXXXXXXXXX"
 APISECRET="XXXXXXXXXXXX"
-PATHNAME="/users/myusername/Pictures/screenshots/"
+PATHNAME="/Users/myusername/Sync/Pictures/Screenshots/"
 FILENAME="screenshot.jpg"
-FOLDERNAME="/alfred"
+FOLDERNAME="/screenshots"
 ```
 
 Get cloudname, apikey and apisecret from your account on [Cloudinary](https://cloudinary.com). Don't have an account? Get one. It's free.
 
-3. Edit temp location (pathname and filename) of the screenshot on disk. The default is `/users/${username}/Pictures/screenshots/screenshot.jpg`
+3. Edit temp location (pathname and filename) of the screenshot on disk. The default is `/Users/${username}/Sync/Pictures/Screenshots/screenshot.jpg`
 
 Edit the yellow bash script in the image below.
 
@@ -48,7 +50,7 @@ Edit the yellow bash script in the image below.
 
 ## Use
 
-1. Open up Alfred and type "Alfredinary". Or just begin typing "Alfredi..", or "Alf..." + <kbd>Enter</kbd>
+1. Open Alfred and type "sc". Optionally specify the filename to be used for the public url on Cloudinary e.g. "sc network-layers-diagram". A random 6 letter suffix will automatically be appended e.g. network-layers-diagram-fyihys.png. 
 
 <img width="701" alt="Alfred" src="https://cloud.githubusercontent.com/assets/307676/19521683/c3a6a33c-9614-11e6-9b4b-b537807d1135.png">
 
