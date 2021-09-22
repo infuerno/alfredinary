@@ -52,7 +52,7 @@ Edit the yellow bash script in the image below.
 
 1. Open Alfred and type "sc". Optionally specify the filename to be used for the public url on Cloudinary e.g. "sc network-layers-diagram". A random 6 letter suffix will automatically be appended e.g. network-layers-diagram-fyihys.png. 
 
-<img width="701" alt="Alfred" src="https://cloud.githubusercontent.com/assets/307676/19521683/c3a6a33c-9614-11e6-9b4b-b537807d1135.png">
+<img width="701" alt="Alfred" src="https://res.cloudinary.com/infuerno/image/upload/v1632348769/screenshots/alfredinary-screenshot-gmqqfd.png">
 
 2. Take a screenshot as usual, mark section of your screen or use <kbd>Space</kbd> to select the current window.
 
